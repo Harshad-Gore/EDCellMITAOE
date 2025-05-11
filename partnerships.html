@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT AOE - Entrepreneurial Development Foundation</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Splide JS for sliders -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <style>
+        :root {
+            --primary: #1a237e;
+            --secondary: #00bcd4;
+            --accent: #ff4081;
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f7fa;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .navbar.scrolled {
+            background: rgba(26, 35, 126, 0.9);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 0;
+            font-weight: 500;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.2s ease-out forwards;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+            opacity: 1;
+        }
+
+        .nav-link.active {
+            color: var(--secondary) !important;
+        }
+
+        .dropdown-menu {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        .dropdown-item {
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            color: white !important;
+            transform: translateX(5px);
+        }
+
+        .btn-glow {
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 188, 212, 0.6);
+        }
+
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-glow:hover::before {
+            left: 100%;
+        }
+
+        /* Mobile menu transitions */
+        .mobile-menu {
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .mobile-menu.open {
+            max-height: 1000px;
+        }
+
+        .mobile-dropdown-content {
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .mobile-dropdown-content.open {
+            max-height: 500px;
+        }
+
+        .mobile-dropdown-toggle .rotate-180 {
+            transform: rotate(180deg);
+        }
+
+        /* Prevent long emails from overflowing in mentor modal */
+        #mentorEmail {
+            overflow-wrap: break-word;
+            word-break: break-all;
+            display: inline-block;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body class="antialiased bg-white">
+    <nav
+        class="fixed w-full z-50 bg-gradient-to-r from-blue-200 to-cyan-200 shadow-md backdrop-filter backdrop-blur-lg bg-opacity-90 border-b border-blue-300/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="images/logo.png" alt="Logo" class="h-14 object-contain">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="nav-link relative group text-gray-800 hover:text-cyan-700 transition-colors duration-300">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+
+                    <div class="relative group">
+                        <button
+                            class="nav-link flex items-center text-gray-800 hover:text-cyan-700 transition-colors duration-300">
+                            About
+                            <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg bg-white/95 backdrop-blur-md py-1 hidden group-hover:block animate-fadeIn">
+                            <a href="index.html#vision-mission"
+                                class="block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-cyan-700 transition-colors">Our
+                                Mission</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-cyan-700 transition-colors">History</a>
+                            <a href="index.html#committee"
+                                class="block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-cyan-700 transition-colors">Team</a>
+                        </div>
+                    </div>
+
+                    <a href="partnerships.html"
+                        class="nav-link relative group text-gray-800 hover:text-cyan-700 transition-colors duration-300">
+                        Partnership
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#"
+                        class="nav-link relative group text-gray-800 hover:text-cyan-700 transition-colors duration-300">
+                        Events
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+
+                    <div class="relative group">
+                        <button
+                            class="nav-link flex items-center text-gray-800 hover:text-cyan-700 transition-colors duration-300">
+                            Resources
+                            <svg class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute left-0 mt-2 w-56 rounded-lg shadow-lg bg-white/95 backdrop-blur-md py-1 hidden group-hover:block animate-fadeIn">
+                            <a href="#"
+                                class="block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-cyan-700 transition-colors">Startup
+                                Toolkit</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-cyan-700 transition-colors">Funding
+                                Opportunities</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-cyan-700 transition-colors">Research
+                                Papers</a>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="nav-link relative group text-gray-800 hover:text-cyan-700 transition-colors duration-300">
+                        Mentors
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+
+                    <a href="#"
+                        class="nav-link relative group text-gray-800 hover:text-cyan-700 transition-colors duration-300">
+                        Contact
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button"
+                        class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-cyan-700 focus:outline-none transition duration-150 ease-in-out">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-blue-300/30">
+            <div class="px-2 pt-2 pb-3 sm:px-3">
+                <a href="#"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cyan-100 hover:text-cyan-700 transition">Home</a>
+
+                <div class="relative">
+                    <button
+                        class="mobile-dropdown-toggle w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cyan-100 hover:text-cyan-700 transition">
+                        About
+                        <svg class="h-4 w-4 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pl-4">
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-cyan-100 hover:text-cyan-700 transition">Our
+                            Mission</a>
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-cyan-100 hover:text-cyan-700 transition">History</a>
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-cyan-100 hover:text-cyan-700 transition">Team</a>
+                    </div>
+                </div>
+
+                <a href="#"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cyan-100 hover:text-cyan-700 transition">Partnership</a>
+                <a href="#"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cyan-100 hover:text-cyan-700 transition">Events</a>
+
+                <div class="relative">
+                    <button
+                        class="mobile-dropdown-toggle w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cyan-100 hover:text-cyan-700 transition">
+                        Resources
+                        <svg class="h-4 w-4 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pl-4">
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-cyan-100 hover:text-cyan-700 transition">Startup
+                            Toolkit</a>
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-cyan-100 hover:text-cyan-700 transition">Funding
+                            Opportunities</a>
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-cyan-100 hover:text-cyan-700 transition">Research
+                            Papers</a>
+                    </div>
+                </div>
+
+                <a href="#"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cyan-100 hover:text-cyan-700 transition">Mentors</a>
+                <a href="#"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cyan-100 hover:text-cyan-700 transition">Contact</a>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- a section that holds all logoes of partners and collabs -->
+
+    <!-- Global Scaleup Partners Section -->
+    <section id="global-partners" class="py-20 bg-white" style="padding-top: 100px;">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <span class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-cyan-600 bg-cyan-100 rounded-full">
+                    PROGRAMS / PARTNERS
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+                    Our Esteemed Partners & Collaborators
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+                    Growth beyond Geography. Our partners and collaborators help us scale innovation and impact globally.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 items-center justify-center">
+                <div class="flex justify-center">
+                    <img src="images/logo-1.png" alt="Partner 1" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/logo-2.png" alt="Partner 2" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/logo-3.png" alt="Partner 3" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/logo-4.png" alt="Partner 4" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/logo-5.png" alt="Partner 5" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/logo-6.png" alt="Partner 6" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/logo-7.png" alt="Partner 7" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/logo-8.png" alt="Partner 8" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/logo-9.png" alt="Partner 9" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/logo-10.png" alt="Partner 10" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/logo-11.png" alt="Partner 11" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/logo-12.png" alt="Partner 12" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+                <div class="flex justify-center">
+                    <img src="images/hostel-fund.jpg" alt="Partner 13" class="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-xl bg-white p-4" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="images/logo.png" alt="Logo" class="h-16 w-auto object-contain bg-transparent">
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering the next generation of innovators and entrepreneurs through
+                        mentorship, resources, and hands-on learning experiences.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-white hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-white hover:bg-cyan-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-white hover:bg-blue-700 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-white hover:bg-pink-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-white hover:bg-red-600 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partnership</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mentors</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+                    <address class="not-italic text-gray-400 space-y-3">
+                        <p class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <span>MIT Academy of Engineering, Alandi, Pune, Maharashtra</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-blue-400"></i>
+                            <span>+91 1234567890</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <span>edf@mitaoe.ac.in</span>
+                        </p>
+                    </address>
+                    <div class="mt-6">
+                        <h4 class="text-sm font-semibold text-gray-400 mb-2">NEWSLETTER</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email"
+                                class="px-4 py-2 w-full rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-lg transition">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2024 MIT AOE Entrepreneurial Development
+                    Foundation. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition flex items-center justify-center hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</body>
+
+</html>

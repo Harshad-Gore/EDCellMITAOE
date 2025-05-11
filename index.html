@@ -158,10 +158,18 @@
         .mobile-dropdown-toggle .rotate-180 {
             transform: rotate(180deg);
         }
+
+        /* Prevent long emails from overflowing in mentor modal */
+        #mentorEmail {
+            overflow-wrap: break-word;
+            word-break: break-all;
+            display: inline-block;
+            max-width: 100%;
+        }
     </style>
 </head>
 
-<body class="antialiased">
+<body class="antialiased bg-white">
     <nav
         class="fixed w-full z-50 bg-gradient-to-r from-blue-200 to-cyan-200 shadow-md backdrop-filter backdrop-blur-lg bg-opacity-90 border-b border-blue-300/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,7 +183,7 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#"
+                    <a href="index.html"
                         class="nav-link relative group text-gray-800 hover:text-cyan-700 transition-colors duration-300">
                         Home
                         <span
@@ -194,19 +202,19 @@
                         </button>
                         <div
                             class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg bg-white/95 backdrop-blur-md py-1 hidden group-hover:block animate-fadeIn">
-                            <a href="#"
+                            <a href="#vision-mission"
                                 class="block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-cyan-700 transition-colors">Our
                                 Mission</a>
                             <a href="#"
                                 class="block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-cyan-700 transition-colors">History</a>
-                            <a href="#"
+                            <a href="#committee"
                                 class="block px-4 py-2 text-gray-800 hover:bg-cyan-50 hover:text-cyan-700 transition-colors">Team</a>
                         </div>
                     </div>
 
-                    <a href="#"
+                    <a href="partnerships.html"
                         class="nav-link relative group text-gray-800 hover:text-cyan-700 transition-colors duration-300">
-                        Programs
+                        Partnership
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
                     </a>
@@ -286,18 +294,18 @@
                         </svg>
                     </button>
                     <div class="mobile-dropdown-content hidden pl-4">
-                        <a href="#"
+                        <a href="#vision-mission"
                             class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-cyan-100 hover:text-cyan-700 transition">Our
                             Mission</a>
                         <a href="#"
                             class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-cyan-100 hover:text-cyan-700 transition">History</a>
-                        <a href="#"
+                        <a href="#committee"
                             class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-cyan-100 hover:text-cyan-700 transition">Team</a>
                     </div>
                 </div>
 
                 <a href="#"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cyan-100 hover:text-cyan-700 transition">Programs</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cyan-100 hover:text-cyan-700 transition">Partnership</a>
                 <a href="#"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-cyan-100 hover:text-cyan-700 transition">Events</a>
 
@@ -332,8 +340,94 @@
         </div>
     </nav>
 
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white" style="padding-top: 100px;">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <span
+                    class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-cyan-600 bg-cyan-100 rounded-full">ABOUT
+                    EDF</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Entrepreneurial Development Foundation
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    The Entrepreneurial Development Foundation (EDF) at MIT Academy of Engineering is dedicated to
+                    fostering innovation, entrepreneurship, and leadership among students and faculty by providing
+                    resources, mentorship, and hands-on opportunities.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="images/keywords.gif" alt="About EDF" class="rounded-2xl shadow-lg w-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-3 text-blue-700">What We Do</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Promote entrepreneurial culture and mindset.</li>
+                        <li>Organize workshops, seminars, and competitions.</li>
+                        <li>Support student startups and innovative projects.</li>
+                        <li>Connect students with industry mentors and investors.</li>
+                        <li>Facilitate funding and incubation opportunities.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission" class="py-16 bg-white from-cyan-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-3xl font-bold text-blue-800 mb-4">Our Vision</h3>
+                    <p class="text-lg text-gray-700">
+                        To be a leading center for nurturing entrepreneurial talent and innovation, empowering students
+                        to become successful entrepreneurs and leaders.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-cyan-700 mb-4">Our Mission</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>To create an ecosystem that encourages creativity and risk-taking.</li>
+                        <li>To provide guidance, mentorship, and resources for aspiring entrepreneurs.</li>
+                        <li>To bridge the gap between academia and industry through collaborative initiatives.</li>
+                        <li>To foster social responsibility and ethical business practices.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section id="objectives" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <span
+                    class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-blue-600 bg-blue-100 rounded-full">OBJECTIVES</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Objectives</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h4 class="font-semibold text-lg text-blue-700 mb-2">Entrepreneurial Mindset</h4>
+                    <p class="text-gray-600">Instill entrepreneurial thinking and problem-solving skills among students.
+                    </p>
+                </div>
+                <div class="bg-cyan-50 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h4 class="font-semibold text-lg text-cyan-700 mb-2">Skill Development</h4>
+                    <p class="text-gray-600">Conduct training programs and workshops to enhance business and technical
+                        skills.</p>
+                </div>
+                <div class="bg-pink-50 rounded-xl p-6 shadow hover:shadow-lg transition">
+                    <h4 class="font-semibold text-lg text-pink-700 mb-2">Startup Support</h4>
+                    <p class="text-gray-600">Provide incubation, mentorship, and funding support for innovative ideas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Mentors Section -->
-    <section id="mentors" class="py-16 bg-gradient-to-b from-white to-gray-50">
+    <section id="mentors" class="from-white bg-white to-gray-50">
         <div class="container mx-auto px-4" style="margin-top: 50px;">
             <div class="text-center mb-16">
                 <span
@@ -364,8 +458,7 @@
                                     class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
                                     <!-- Image container with fixed aspect ratio -->
                                     <div class="relative overflow-hidden pt-[70%]">
-                                        <img src="images/ravindra_sir.jpg"
-                                            alt="Dr. Ravindra Bachate"
+                                        <img src="images/ravindra_sir.jpg" alt="Dr. Ravindra Bachate"
                                             class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
                                         <div
                                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
@@ -426,8 +519,7 @@
                                     class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
                                     <!-- Image container with fixed aspect ratio -->
                                     <div class="relative overflow-hidden pt-[70%]">
-                                        <img src="images/prafulla_sir.webp"
-                                            alt="Dr. Prafulla Hatte"
+                                        <img src="images/prafulla_sir.webp" alt="Dr. Prafulla Hatte"
                                             class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
                                         <div
                                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
@@ -486,8 +578,7 @@
                                     class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
                                     <!-- Image container with fixed aspect ratio -->
                                     <div class="relative overflow-hidden pt-[70%]">
-                                        <img src="images/pramod_sir.jpeg"
-                                            alt="Dr. Pramod D. Ganjewar"
+                                        <img src="images/pramod_sir.jpeg" alt="Dr. Pramod D. Ganjewar"
                                             class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
                                         <div
                                             class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
@@ -537,11 +628,1197 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-500 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <!-- Image container with fixed aspect ratio -->
+                                    <div class="relative overflow-hidden pt-[70%]">
+                                        <img src="images/isaq_sir.png" alt="Isaq Abdul Shikalgar"
+                                            class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-6">
+                                            <h3 class="text-xl font-bold text-white">Isaq Abdul Shikalgar</h3>
+                                            <p class="text-green-200">Assistant Professor, SEE</p>
+                                        </div>
+                                    </div>
+                                    <!-- Content container with flex-grow -->
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Embedded
+                                                system</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-100 text-teal-800">Signal
+                                                Processing</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6 line-clamp-3 flex-grow">Isaq Shikalgar is a
+                                            dedicated academician and innovator with over 20 years of teaching
+                                            experience in ...</p>
+                                        <div class="flex justify-between items-center mt-auto">
+                                            <div class="flex space-x-2">
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition">
+                                                    <i class="fab fa-linkedin-in text-sm"></i>
+                                                </a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 hover:bg-green-200 transition">
+                                                    <i class="fab fa-whatsapp text-sm"></i>
+                                                </a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-red-100 text-red-800 hover:bg-red-200 transition">
+                                                    <i class="fas fa-envelope text-sm"></i>
+                                                </a>
+                                            </div>
+                                            <button
+                                                class="text-sm font-medium text-green-600 hover:text-green-800 transition flex items-center view-mentor-btn"
+                                                data-mentor-id="4">
+                                                View Profile <i class="fas fa-chevron-right ml-1"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
 
-                        <!-- more mentor slides  -->
+                        <!-- Mentor 4 - Dr. Kalpana Pawase -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-pink-600 to-blue-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="relative overflow-hidden pt-[70%]">
+                                        <img src="images/kalpana_pawase.jpg" alt="Dr. Kalpana Pawase"
+                                            class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-6">
+                                            <h3 class="text-xl font-bold text-white">Dr. Kalpana Pawase</h3>
+                                            <p class="text-pink-200">Assistant Professor, SEE</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-pink-100 text-pink-800">Image
+                                                Processing</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Machine
+                                                Learning</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Biomedical</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6 line-clamp-3 flex-grow">Dr Kalpana Pawase,
+                                            Assistant Professor, Biomedical Engineering, 18 years teaching experience...
+                                        </p>
+                                        <div class="flex justify-between items-center mt-auto">
+                                            <div class="flex space-x-2">
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition"><i
+                                                        class="fab fa-linkedin-in text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 hover:bg-green-200 transition"><i
+                                                        class="fab fa-whatsapp text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-red-100 text-red-800 hover:bg-red-200 transition"><i
+                                                        class="fas fa-envelope text-sm"></i></a>
+                                            </div>
+                                            <button
+                                                class="text-sm font-medium text-pink-600 hover:text-pink-800 transition flex items-center view-mentor-btn"
+                                                data-mentor-id="5">View Profile <i
+                                                    class="fas fa-chevron-right ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Mentor 5 - Satish Ranade -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-yellow-600 to-blue-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="relative overflow-hidden pt-[70%]">
+                                        <img src="images/satish_ranade.jpg" alt="Satish Ranade"
+                                            class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-6">
+                                            <h3 class="text-xl font-bold text-white">Satish Ranade</h3>
+                                            <p class="text-yellow-200">Self Employed, BFSI/Advisor</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">BFSI</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Mentoring</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Corporate
+                                                Training</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6 line-clamp-3 flex-grow">Advisor to National &
+                                            International Start-ups, 40+ years of experience, ex-WIPRO, KPIT, author,
+                                            mentor...</p>
+                                        <div class="flex justify-between items-center mt-auto">
+                                            <div class="flex space-x-2">
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition"><i
+                                                        class="fab fa-linkedin-in text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 hover:bg-green-200 transition"><i
+                                                        class="fab fa-whatsapp text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-red-100 text-red-800 hover:bg-red-200 transition"><i
+                                                        class="fas fa-envelope text-sm"></i></a>
+                                            </div>
+                                            <button
+                                                class="text-sm font-medium text-yellow-600 hover:text-yellow-800 transition flex items-center view-mentor-btn"
+                                                data-mentor-id="6">View Profile <i
+                                                    class="fas fa-chevron-right ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Mentor 6 - Vivek Kamalakar Desai -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-indigo-600 to-blue-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="relative overflow-hidden pt-[70%]">
+                                        <img src="images/vivek_desai.jpg" alt="Vivek Kamalakar Desai"
+                                            class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-6">
+                                            <h3 class="text-xl font-bold text-white">Vivek Kamalakar Desai</h3>
+                                            <p class="text-indigo-200">Associate Professor, Founder WaveNXD</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">Electronics</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Automation</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Embedded
+                                                VLSI</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6 line-clamp-3 flex-grow">Co-founder and promoter
+                                            WaveNxd Technologies Pvt. Ltd. Experienced in Embedded/VLSI, Automotive
+                                            Electronics...</p>
+                                        <div class="flex justify-between items-center mt-auto">
+                                            <div class="flex space-x-2">
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition"><i
+                                                        class="fab fa-linkedin-in text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 hover:bg-green-200 transition"><i
+                                                        class="fab fa-whatsapp text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-red-100 text-red-800 hover:bg-red-200 transition"><i
+                                                        class="fas fa-envelope text-sm"></i></a>
+                                            </div>
+                                            <button
+                                                class="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition flex items-center view-mentor-btn"
+                                                data-mentor-id="7">View Profile <i
+                                                    class="fas fa-chevron-right ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Mentor 7 - Vidhyadhar Dharmadhikari -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-gray-600 to-blue-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="relative overflow-hidden pt-[70%]">
+                                        <img src="images/vidhyadhar_dharmadhikari.jpg" alt="Vidhyadhar Dharmadhikari"
+                                            class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-6">
+                                            <h3 class="text-xl font-bold text-white">Vidhyadhar Dharmadhikari</h3>
+                                            <p class="text-gray-200">Freelance Embedded Designer</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Embedded
+                                                Systems</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Automotive</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Agro-Tech</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6 line-clamp-3 flex-grow">Experienced Embedded System
+                                            Designer and Educator. 30+ years in industry and academia, passionate about
+                                            technology and education...</p>
+                                        <div class="flex justify-between items-center mt-auto">
+                                            <div class="flex space-x-2">
+                                                <a href="https://www.linkedin.com/in/vidhyadhar-dharmadhikari/"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition"><i
+                                                        class="fab fa-linkedin-in text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 hover:bg-green-200 transition"><i
+                                                        class="fab fa-whatsapp text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-red-100 text-red-800 hover:bg-red-200 transition"><i
+                                                        class="fas fa-envelope text-sm"></i></a>
+                                            </div>
+                                            <button
+                                                class="text-sm font-medium text-gray-600 hover:text-gray-800 transition flex items-center view-mentor-btn"
+                                                data-mentor-id="8">View Profile <i
+                                                    class="fas fa-chevron-right ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Mentor 8 - Rucha Sarwadnya-Doifode -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-cyan-600 to-blue-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="relative overflow-hidden pt-[70%]">
+                                        <img src="images/rucha_sarwadnya.jpg" alt="Rucha Sarwadnya-Doifode"
+                                            class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-6">
+                                            <h3 class="text-xl font-bold text-white">Rucha Sarwadnya-Doifode</h3>
+                                            <p class="text-cyan-200">Chief Manager, STEM Education</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-cyan-100 text-cyan-800">EdTech</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">STEM</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Curriculum</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6 line-clamp-3 flex-grow">STEM Trainer & Manager,
+                                            Subject Matter Expert, passionate about K-12 science education, curriculum
+                                            development...</p>
+                                        <div class="flex justify-between items-center mt-auto">
+                                            <div class="flex space-x-2">
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition"><i
+                                                        class="fab fa-linkedin-in text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 hover:bg-green-200 transition"><i
+                                                        class="fab fa-whatsapp text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-red-100 text-red-800 hover:bg-red-200 transition"><i
+                                                        class="fas fa-envelope text-sm"></i></a>
+                                            </div>
+                                            <button
+                                                class="text-sm font-medium text-cyan-600 hover:text-cyan-800 transition flex items-center view-mentor-btn"
+                                                data-mentor-id="9">View Profile <i
+                                                    class="fas fa-chevron-right ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Mentor 9 - Bajirao Doifode -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-orange-600 to-blue-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="relative overflow-hidden pt-[70%]">
+                                        <img src="images/bajirao_doifode.jpg" alt="Bajirao Doifode"
+                                            class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-6">
+                                            <h3 class="text-xl font-bold text-white">Bajirao Doifode</h3>
+                                            <p class="text-orange-200">Territory Manager, Bridgestone India</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800">Sales</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Marketing</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Production</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6 line-clamp-3 flex-grow">Territory Sales Manager at
+                                            Bridgestone India, 11+ years in tire and rubber industry, sales, operations,
+                                            quality...</p>
+                                        <div class="flex justify-between items-center mt-auto">
+                                            <div class="flex space-x-2">
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition"><i
+                                                        class="fab fa-linkedin-in text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 hover:bg-green-200 transition"><i
+                                                        class="fab fa-whatsapp text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-red-100 text-red-800 hover:bg-red-200 transition"><i
+                                                        class="fas fa-envelope text-sm"></i></a>
+                                            </div>
+                                            <button
+                                                class="text-sm font-medium text-orange-600 hover:text-orange-800 transition flex items-center view-mentor-btn"
+                                                data-mentor-id="10">View Profile <i
+                                                    class="fas fa-chevron-right ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Mentor 10 - Nigavekar Atul Ravichandra -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-blue-800 to-blue-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="relative overflow-hidden pt-[70%]">
+                                        <img src="images/atul_nigavekar.jpg" alt="Nigavekar Atul Ravichandra"
+                                            class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-6">
+                                            <h3 class="text-xl font-bold text-white">Nigavekar Atul Ravichandra</h3>
+                                            <p class="text-blue-200">Associate Professor, WaveNxD</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Electronics</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Ultrasonics</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">Product
+                                                Engineering</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6 line-clamp-3 flex-grow">Co-founder of WaveNxD
+                                            Technologies, Associate Professor, innovator in ultrasonic spray nozzles,
+                                            product engineering...</p>
+                                        <div class="flex justify-between items-center mt-auto">
+                                            <div class="flex space-x-2">
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition"><i
+                                                        class="fab fa-linkedin-in text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 hover:bg-green-200 transition"><i
+                                                        class="fab fa-whatsapp text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-red-100 text-red-800 hover:bg-red-200 transition"><i
+                                                        class="fas fa-envelope text-sm"></i></a>
+                                            </div>
+                                            <button
+                                                class="text-sm font-medium text-blue-800 hover:text-blue-600 transition flex items-center view-mentor-btn"
+                                                data-mentor-id="11">View Profile <i
+                                                    class="fas fa-chevron-right ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Mentor 11 - Dr. Raghavendra Deolankar -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-green-700 to-blue-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="relative overflow-hidden pt-[70%]">
+                                        <img src="images/raghavendra_deolankar.jpg" alt="Dr. Raghavendra Deolankar"
+                                            class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-6">
+                                            <h3 class="text-xl font-bold text-white">Dr. Raghavendra Deolankar</h3>
+                                            <p class="text-green-200">Freelance Consultant - Manufacturing Excellence
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Manufacturing</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Quality</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">Lean</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6 line-clamp-3 flex-grow">27+ years in manufacturing
+                                            operations, quality, production, cost optimization, lean management,
+                                            MSMEs...</p>
+                                        <div class="flex justify-between items-center mt-auto">
+                                            <div class="flex space-x-2">
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition"><i
+                                                        class="fab fa-linkedin-in text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 hover:bg-green-200 transition"><i
+                                                        class="fab fa-whatsapp text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-red-100 text-red-800 hover:bg-red-200 transition"><i
+                                                        class="fas fa-envelope text-sm"></i></a>
+                                            </div>
+                                            <button
+                                                class="text-sm font-medium text-green-700 hover:text-green-900 transition flex items-center view-mentor-btn"
+                                                data-mentor-id="12">View Profile <i
+                                                    class="fas fa-chevron-right ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Mentor 12 - Prajakta Prakash Nalgirkar -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-red-600 to-blue-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="relative overflow-hidden pt-[70%]">
+                                        <img src="images/prajakta_nalgirkar.jpg" alt="Prajakta Prakash Nalgirkar"
+                                            class="absolute top-0 left-0 w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-6">
+                                            <h3 class="text-xl font-bold text-white">Prajakta Prakash Nalgirkar</h3>
+                                            <p class="text-red-200">Assistant Professor, Red Hat Academy</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow flex flex-col">
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">Linux</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Ansible</span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">RHCE</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6 line-clamp-3 flex-grow">Certified RHCSA, RHCE,
+                                            passionate about Linux system administration, Red Hat Academy trainer...</p>
+                                        <div class="flex justify-between items-center mt-auto">
+                                            <div class="flex space-x-2">
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition"><i
+                                                        class="fab fa-linkedin-in text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 hover:bg-green-200 transition"><i
+                                                        class="fab fa-whatsapp text-sm"></i></a>
+                                                <a href="#"
+                                                    class="w-8 h-8 inline-flex items-center justify-center rounded-full bg-red-100 text-red-800 hover:bg-red-200 transition"><i
+                                                        class="fas fa-envelope text-sm"></i></a>
+                                            </div>
+                                            <button
+                                                class="text-sm font-medium text-red-600 hover:text-red-800 transition flex items-center view-mentor-btn"
+                                                data-mentor-id="13">View Profile <i
+                                                    class="fas fa-chevron-right ml-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
+    </section>
+
+    <section id="alumni-council" class="py-16 from-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span
+                    class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-blue-600 bg-blue-100 rounded-full">ALUMNI
+                    COUNCIL</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Meet Our <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">Alumni
+                        Leaders</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Our distinguished alumni council members are making an impact across industries worldwide.
+                </p>
+            </div>
+        </div>
+        <div class="container mx-auto px-4">
+            <!-- Alumni Council Slider -->
+            <div class="splide" id="alumni-slider">
+                <div class="splide__track py-8">
+                    <ul class="splide__list">
+                        <!-- Alumni 1 -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="flex flex-col items-center p-8">
+                                        <img src="images/Kunal-Raut.jfif" alt="Kunal Raut"
+                                            class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-white shadow-lg">
+                                        <h3
+                                            class="text-2xl font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">
+                                            Mr. Kunal Raut</h3>
+                                        <p class="text-gray-600 font-medium">Senior Software Engineer</p>
+                                        <p
+                                            class="text-base font-semibold mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">
+                                            Bhindi</p>
+                                        <a href="https://www.linkedin.com/in/rautkunal/" target="_blank"
+                                            class="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-white font-medium shadow hover:bg-cyan-600 transition">
+                                            <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Alumni 2 -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="flex flex-col items-center p-8">
+                                        <img src="images/Kavish-Ahuja.jfif" alt="Sneha Patil"
+                                            class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-white shadow-lg">
+                                        <h3
+                                            class="text-2xl font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-400">
+                                            Mr. Kavish Ahuja</h3>
+                                        <p class="text-gray-600 font-medium">Puran Poli</p>
+                                        <p
+                                            class="text-base font-semibold mt-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-400">
+                                            Aamras</p>
+                                        <a href="https://www.linkedin.com/in/kavishahuja/" target="_blank"
+                                            class="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-purple-600 text-white font-medium shadow hover:bg-pink-500 transition">
+                                            <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Alumni 3 -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="flex flex-col items-center p-8">
+                                        <img src="images/harshit.jpeg" alt="Rahul Deshmukh"
+                                            class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-white shadow-lg">
+                                        <h3
+                                            class="text-2xl font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-400">
+                                            Mr. Harshit Agrawal</h3>
+                                        <p class="text-gray-600 font-medium">Kadhi Rice</p>
+                                        <p
+                                            class="text-base font-semibold mt-2 text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-400">
+                                            Wadapav</p>
+                                        <a href="https://www.linkedin.com/in/rahuldeshmukh" target="_blank"
+                                            class="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-green-600 text-white font-medium shadow hover:bg-teal-500 transition">
+                                            <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Alumni 4 -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-pink-600 to-blue-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="flex flex-col items-center p-8">
+                                        <img src="images/Alouk-Pawar.jfif" alt="Priya Sharma"
+                                            class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-white shadow-lg">
+                                        <h3
+                                            class="text-2xl font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-400">
+                                            Mr. Alouk Pawar</h3>
+                                        <p class="text-gray-600 font-medium">Techno-Commercial Manager</p>
+                                        <p
+                                            class="text-base font-semibold mt-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-400">
+                                            Kavitak</p>
+                                        <a href="https://www.linkedin.com/in/priyasharma" target="_blank"
+                                            class="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-pink-600 text-white font-medium shadow hover:bg-blue-500 transition">
+                                            <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Alumni 5 -->
+                        <li class="splide__slide px-3">
+                            <div class="relative group h-full flex flex-col">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-yellow-500 to-blue-400 rounded-2xl shadow-xl transform group-hover:-rotate-1 group-hover:scale-105 transition duration-500">
+                                </div>
+                                <div
+                                    class="relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md transition duration-500 group-hover:shadow-xl">
+                                    <div class="flex flex-col items-center p-8">
+                                        <img src="images/Shubham-Photo.png" alt="Vikas Joshi"
+                                            class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-white shadow-lg">
+                                        <h3
+                                            class="text-2xl font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-blue-400">
+                                            Mr. Shubham Jaiswal</h3>
+                                        <p class="text-gray-600 font-medium">Error 404</p>
+                                        <p
+                                            class="text-base font-semibold mt-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-blue-400">
+                                            Not Found</p>
+                                        <a href="https://www.linkedin.com/in/vikasjoshi" target="_blank"
+                                            class="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-yellow-500 text-white font-medium shadow hover:bg-blue-500 transition">
+                                            <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    if (document.getElementById('alumni-slider')) {
+                        new Splide('#alumni-slider', {
+                            type: 'loop',
+                            perPage: 3,
+                            perMove: 1,
+                            gap: '2rem',
+                            pagination: false,
+                            breakpoints: {
+                                1024: { perPage: 2 },
+                                768: { perPage: 1 }
+                            },
+                            autoplay: true,
+                            interval: 3500,
+                            pauseOnHover: true,
+                            pauseOnFocus: true,
+                        }).mount();
+                    }
+                });
+            </script>
+    </section>
+
+
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-16 bg-white from-blue-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <span
+                    class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-blue-600 bg-blue-100 rounded-full">ACTIVITIES</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What We Organize</h2>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition text-center">
+                    <i class="fas fa-lightbulb text-3xl text-blue-500 mb-3"></i>
+                    <h4 class="font-semibold text-lg mb-2">Workshops</h4>
+                    <p class="text-gray-600">Hands-on sessions on entrepreneurship, innovation, and business skills.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition text-center">
+                    <i class="fas fa-users text-3xl text-cyan-500 mb-3"></i>
+                    <h4 class="font-semibold text-lg mb-2">Seminars</h4>
+                    <p class="text-gray-600">Expert talks and panel discussions with industry leaders and alumni.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition text-center">
+                    <i class="fas fa-trophy text-3xl text-pink-500 mb-3"></i>
+                    <h4 class="font-semibold text-lg mb-2">Competitions</h4>
+                    <p class="text-gray-600">Startup pitch contests, hackathons, and business plan competitions.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition text-center">
+                    <i class="fas fa-network-wired text-3xl text-green-500 mb-3"></i>
+                    <h4 class="font-semibold text-lg mb-2">Networking</h4>
+                    <p class="text-gray-600">Connect with mentors, investors, and fellow entrepreneurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <div class="text-left">
+                    <span
+                        class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-blue-600 bg-blue-100 rounded-full">OUR
+                        EVENTS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Events</h2>
+                </div>
+            </div>
+
+            <!-- Timeline Slider -->
+            <div class="relative">
+                <div
+                    class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-200 to-cyan-200 z-0 hidden md:block">
+                </div>
+                <div class="splide" id="events-slider">
+                    <div class="splide__track py-8">
+                        <ul class="splide__list">
+                            <!-- Event 1 -->
+                            <li class="splide__slide px-3">
+                                <div
+                                    class="relative flex md:flex-row flex-col items-center md:items-start min-h-[300px]">
+                                    <div class="md:w-1/2 w-full md:pr-8 z-10">
+                                        <div
+                                            class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full border-t-4 border-blue-500">
+                                            <img src="images/Intellectual-Property-Rights.jpg" alt="Event"
+                                                class="w-full h-48 object-cover">
+                                            <div class="p-6 flex flex-col flex-grow">
+                                                <h3 class="text-xl font-semibold mb-2">Writing Workshop</h3>
+                                                <p class="text-gray-600 mb-4">A writing workshop was conducted by
+                                                    Ajanvriksha club in collaboration...</p>
+                                                <button
+                                                    class="mt-auto text-blue-600 hover:text-blue-800 font-semibold read-more-btn"
+                                                    data-event="1">READ MORE</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hidden md:block w-10 flex-shrink-0 flex flex-col items-center z-10">
+                                        <span
+                                            class="w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-lg"></span>
+                                    </div>
+                                    <div class="md:w-1/2"></div>
+                                </div>
+                            </li>
+
+                            <!-- Event 2 -->
+                            <li class="splide__slide px-3">
+                                <div
+                                    class="relative flex md:flex-row flex-col items-center md:items-start min-h-[300px]">
+                                    <div class="md:w-1/2"></div>
+                                    <div class="hidden md:block w-10 flex-shrink-0 flex flex-col items-center z-10">
+                                        <span
+                                            class="w-6 h-6 bg-cyan-500 rounded-full border-4 border-white shadow-lg"></span>
+                                    </div>
+                                    <div class="md:w-1/2 w-full md:pl-8 z-10">
+                                        <div
+                                            class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full border-t-4 border-cyan-500">
+                                            <img src="images/Practice-Venture-Booster.jpg" alt="Event"
+                                                class="w-full h-48 object-cover">
+                                            <div class="p-6 flex flex-col flex-grow">
+                                                <h3 class="text-xl font-semibold mb-2">Kalam Jayanti</h3>
+                                                <p class="text-gray-600 mb-4">It was our former President and renowned
+                                                    Dr. A P J Abdul Kalam’s birthday...</p>
+                                                <button
+                                                    class="mt-auto text-cyan-600 hover:text-cyan-800 font-semibold read-more-btn"
+                                                    data-event="2">READ MORE</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Event 3 -->
+                            <li class="splide__slide px-3">
+                                <div
+                                    class="relative flex md:flex-row flex-col items-center md:items-start min-h-[300px]">
+                                    <div class="md:w-1/2 w-full md:pr-8 z-10">
+                                        <div
+                                            class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full border-t-4 border-green-500">
+                                            <img src="images/Intellectual-Property-Rights.jpg" alt="Event"
+                                                class="w-full h-48 object-cover">
+                                            <div class="p-6 flex flex-col flex-grow">
+                                                <h3 class="text-xl font-semibold mb-2">Entrepreneurship GL</h3>
+                                                <p class="text-gray-600 mb-4">Entrepreneurship and Innovation as career
+                                                    opportunity...</p>
+                                                <button
+                                                    class="mt-auto text-green-600 hover:text-green-800 font-semibold read-more-btn"
+                                                    data-event="3">READ MORE</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hidden md:block w-10 flex-shrink-0 flex flex-col items-center z-10">
+                                        <span
+                                            class="w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-lg"></span>
+                                    </div>
+                                    <div class="md:w-1/2"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Modal -->
+            <div class="fixed inset-0 z-50 hidden" id="eventModal">
+                <div class="flex items-center justify-center min-h-screen p-4">
+                    <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" aria-hidden="true"></div>
+                    <div class="relative bg-white rounded-xl max-w-2xl w-full mx-2 overflow-hidden">
+                        <div class="p-6 flex justify-between items-center border-b">
+                            <h3 class="text-2xl font-bold" id="eventModalTitle"></h3>
+                            <button class="text-gray-500 hover:text-gray-700" id="closeEventModal">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <img src="" alt="" class="w-full h-64 object-cover rounded-lg mb-4" id="eventModalImage">
+                            <div class="prose" id="eventModalContent"></div>
+                        </div>
+                        <div class="p-6 border-t flex justify-end">
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                                id="closeEventModalBtn">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Splide slider
+            new Splide('#events-slider', {
+                type: 'loop',
+                perPage: 2,
+                perMove: 1,
+                gap: '2rem',
+                pagination: false,
+                arrows: false,
+                breakpoints: {
+                    768: { perPage: 1 }
+                },
+                autoplay: true,
+                interval: 3000
+            }).mount();
+
+            // Modal functionality
+            const modal = document.getElementById('eventModal');
+            const closeBtns = document.querySelectorAll('#closeEventModal, #closeEventModalBtn');
+
+            const eventData = {
+                1: {
+                    title: 'Writing Workshop',
+                    image: 'images/Intellectual-Property-Rights.jpg',
+                    content: '<p>Full details about writing workshop...</p>'
+                },
+                2: {
+                    title: 'Kalam Jayanti',
+                    image: 'images/Intellectual-Property-Rights.jpg',
+                    content: '<p>Full details about Kalam Jayanti...</p>'
+                },
+                3: {
+                    title: 'Entrepreneurship GL',
+                    image: 'images/Intellectual-Property-Rights.jpg',
+                    content: '<p>Full details about Entrepreneurship GL...</p>'
+                }
+            };
+
+            document.querySelectorAll('.read-more-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const eventId = btn.dataset.event;
+                    const data = eventData[eventId];
+
+                    document.getElementById('eventModalTitle').textContent = data.title;
+                    document.getElementById('eventModalImage').src = data.image;
+                    document.getElementById('eventModalContent').innerHTML = data.content;
+
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
+
+
+    <!-- Partners/Collaborators Section -->
+    <section id="partners" class="py-16 bg-white from-cyan-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <span
+                    class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-cyan-600 bg-cyan-100 rounded-full">PARTNERS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Collaborators</h2>
+            </div>
+            <div class="splide" id="partners-slider">
+                <div class="splide__track py-2">
+                    <ul class="splide__list">
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-1.png" alt="Partner 1"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-2.png" alt="Partner 2"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-3.png" alt="Partner 3"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-4.png" alt="Partner 4"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-5.png" alt="Partner 5"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-6.png" alt="Partner 6"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-7.png" alt="Partner 7"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-8.png" alt="Partner 8"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-9.png" alt="Partner 9"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-10.png" alt="Partner 10"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-11.png" alt="Partner 11"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/logo-12.png" alt="Partner 12"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                        <li class="splide__slide flex justify-center items-center">
+                            <img src="images/hostel-fund.jpg" alt="Partner 13"
+                                class="h-32 w-auto object-contain grayscale hover:grayscale-0 transition" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    if (document.getElementById('partners-slider')) {
+                        new Splide('#partners-slider', {
+                            type: 'loop',
+                            perPage: 5,
+                            perMove: 1,
+                            gap: '0.5rem',
+                            pagination: false,
+                            arrows: false,
+                            drag: false,
+                            autoplay: true,
+                            interval: 1800,
+                            speed: 1200,
+                            pauseOnHover: false,
+                            pauseOnFocus: false,
+                            breakpoints: {
+                                1024: { perPage: 4 },
+                                768: { perPage: 2 }
+                            }
+                        }).mount();
+                    }
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- Team/Committee Section - Slider Version -->
+    <section id="committee" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl"></div>
+        <div class="text-center mb-10">
+            <span class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-blue-600 bg-blue-100 rounded-full">OUR
+                TEAM</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Committee Members</h2>
+        </div>
+        <div class="splide" id="committee-slider">
+            <div class="splide__track py-8">
+                <ul class="splide__list">
+                    <!-- Dr. Mahesh Goudar -->
+                    <li class="splide__slide px-3">
+                        <a href="https://www.linkedin.com/in/mahesh-goudar-68840a28/" target="_blank"
+                            class="bg-blue-50 rounded-xl p-8 shadow text-center hover:shadow-lg transition block max-w-xs mx-auto">
+                            <img src="images/Mahesh_Goudar.jpg" alt="Dr. Mahesh Goudar"
+                                class="w-32 h-32 mx-auto rounded-full mb-4 object-cover border-4 border-white shadow">
+                            <h4 class="font-semibold text-lg text-blue-700 mb-1">Dr. Mahesh Goudar</h4>
+                            <p class="text-gray-600 mb-2">Board of Director</p>
+                            <p class="text-gray-500 text-sm">MIT Academy of Engineering</p>
+                        </a>
+                    </li>
+                    <!-- Mr. Vinayak Kshirsagar -->
+                    <li class="splide__slide px-3">
+                        <a href="#" target="_blank"
+                            class="bg-cyan-50 rounded-xl p-8 shadow text-center hover:shadow-lg transition block max-w-xs mx-auto">
+                            <img src="images/Vinayak-Kshirsagar.jpeg" alt="Mr. Vinayak Kshirsagar"
+                                class="w-32 h-32 mx-auto rounded-full mb-4 object-cover border-4 border-white shadow">
+                            <h4 class="font-semibold text-lg text-cyan-700 mb-1">Mr. Vinayak Kshirsagar</h4>
+                            <p class="text-gray-600 mb-2">Board of Director</p>
+                            <p class="text-gray-500 text-sm">MIT Academy of Engineering</p>
+                        </a>
+                    </li>
+                    <!-- Dr. Yogesh Bhalerao -->
+                    <li class="splide__slide px-3">
+                        <a href="https://www.linkedin.com/in/dr-yogesh-bhalerao-90638817/" target="_blank"
+                            class="bg-pink-50 rounded-xl p-8 shadow text-center hover:shadow-lg transition block max-w-xs mx-auto">
+                            <img src="images/Yogesh_Bhalerao.jpeg" alt="Dr. Yogesh Bhalerao"
+                                class="w-32 h-32 mx-auto rounded-full mb-4 object-cover border-4 border-white shadow">
+                            <h4 class="font-semibold text-lg text-pink-700 mb-1">Dr. Yogesh Bhalerao</h4>
+                            <p class="text-gray-600 mb-2">Board of Director</p>
+                            <p class="text-gray-500 text-sm">MIT Academy of Engineering</p>
+                        </a>
+                    </li>
+                    <!-- Dr. Shitalkumar Jain -->
+                    <li class="splide__slide px-3">
+                        <a href="https://www.linkedin.com/in/dr-shitalkumar-a-jain-3a105554/" target="_blank"
+                            class="bg-blue-50 rounded-xl p-8 shadow text-center hover:shadow-lg transition block max-w-xs mx-auto">
+                            <img src="images/Shitalkumar_Jain_Profile.jfif" alt="Dr. Shitalkumar Jain"
+                                class="w-32 h-32 mx-auto rounded-full mb-4 object-cover border-4 border-white shadow">
+                            <h4 class="font-semibold text-lg text-blue-700 mb-1">Dr. Shitalkumar Jain</h4>
+                            <p class="text-gray-600 mb-2">Board of Director</p>
+                            <p class="text-gray-500 text-sm">MIT Academy of Engineering</p>
+                        </a>
+                    </li>
+                    <!-- Prof. Saylee S. Bidwai -->
+                    <li class="splide__slide px-3">
+                        <a href="https://www.linkedin.com/in/saylee-bidwai-12aa52b6/" target="_blank"
+                            class="bg-cyan-50 rounded-xl p-8 shadow text-center hover:shadow-lg transition block max-w-xs mx-auto">
+                            <img src="images/Saylee-Bidwaie.png" alt="Prof. Saylee S. Bidwai"
+                                class="w-32 h-32 mx-auto rounded-full mb-4 object-cover border-4 border-white shadow">
+                            <h4 class="font-semibold text-lg text-cyan-700 mb-1">Prof. Saylee S. Bidwai</h4>
+                            <p class="text-gray-600 mb-2">Head- ED-Cell</p>
+                            <p class="text-gray-500 text-sm">MIT Academy of Engineering</p>
+                        </a>
+                    </li>
+                    <!-- Smt. Tejal Trilokekar -->
+                    <li class="splide__slide px-3">
+                        <a href="https://www.linkedin.com/in/tejal-trilokekar-7b6384290/" target="_blank"
+                            class="bg-pink-50 rounded-xl p-8 shadow text-center hover:shadow-lg transition block max-w-xs mx-auto">
+                            <img src="images/Tejal-Trilokekar.png" alt="Smt. Tejal Trilokekar"
+                                class="w-32 h-32 mx-auto rounded-full mb-4 object-cover border-4 border-white shadow">
+                            <h4 class="font-semibold text-lg text-pink-700 mb-1">Smt. Tejal Trilokekar</h4>
+                            <p class="text-gray-600 mb-2">Operation Executive</p>
+                            <p class="text-gray-500 text-sm">MIT Academy of Engineering</p>
+                        </a>
+                    </li>
+                    <!-- Ms. Neha Kshirsagar -->
+                    <li class="splide__slide px-3">
+                        <a href="https://www.linkedin.com/in/neha-kshirsagar-aa5604216/" target="_blank"
+                            class="bg-blue-50 rounded-xl p-8 shadow text-center hover:shadow-lg transition block max-w-xs mx-auto">
+                            <img src="images/Neha-Kshirsagar.png" alt="Ms. Neha Kshirsagar"
+                                class="w-32 h-32 mx-auto rounded-full mb-4 object-cover border-4 border-white shadow">
+                            <h4 class="font-semibold text-lg text-blue-700 mb-1">Ms. Neha Kshirsagar</h4>
+                            <p class="text-gray-600 mb-2">Accountant</p>
+                            <p class="text-gray-500 text-sm">MIT Academy of Engineering</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                if (document.getElementById('committee-slider')) {
+                    new Splide('#committee-slider', {
+                        type: 'loop',
+                        perPage: 3,
+                        perMove: 1,
+                        gap: '0.1rem',
+                        pagination: false,
+                        breakpoints: {
+                            1024: { perPage: 2 },
+                            768: { perPage: 1 }
+                        },
+                        autoplay: true,
+                        interval: 3500,
+                        pauseOnHover: true,
+                        pauseOnFocus: true,
+                    }).mount();
+                }
+            });
+        </script>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white from-blue-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <span
+                    class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-blue-600 bg-blue-100 rounded-full">CONTACT
+                    US</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Have questions or want to collaborate? Reach out to us!
+                </p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow p-8">
+                <form>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Name</label>
+                            <input type="text"
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email"
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Message</label>
+                        <textarea
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            rows="4" required></textarea>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <button type="submit"
+                            class="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-700 transition">Send
+                            Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </section>
 
     <!-- Mentor Modal -->
@@ -619,6 +1896,7 @@
         </div>
     </div>
 
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
@@ -657,7 +1935,8 @@
                     <ul class="space-y-3">
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Programs</a></li>
+                        <li><a href="partnerships.html"
+                                class="text-gray-400 hover:text-white transition">Partnership</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Events</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Mentors</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
@@ -815,8 +2094,119 @@
                         domains: ['IoT', 'WSN', 'Energy Conservation'],
                         bio: '<p>My area of research is Wireless Sensor Networks and Internet of Things. My research focus is on energy conservation in WSN and IoT. As The devices in WSN and IOT are battery powered and need sufficient amount of battery backup. So to extend the life of such devices energy minimization through any means will play very important role.</p><p>Dr. Pramod D. Ganjewar, PhD(CSE), ME(CSE), BE(CSE), Associate Professor, School of Computer Engineering, MIT Academy of Engineering, Alandi(D.), Pune.</p>',
                         image: 'images/pramod_sir.jpeg'
+                    },
+                    '4': {
+                        name: 'Isaq Abdul Shikalgar',
+                        position: 'Assistant Professor, SEE',
+                        email: 'isaq.shikalgar@mitaoe.ac.in',
+                        whatsapp: '+91 9373090673',
+                        organization: 'MIT Academy of Engineering',
+                        designation: 'Assistant Professor',
+                        domains: ['Embedded system', 'Signal Processing', 'IoT'],
+                        bio: `<p>Name: Isaq Shikalgar<br>Education: Pursuing Ph.D. in Shivaji University, M.E. in E&TC Shivaji University, B.E. in Electronics engineering Shivaji University<br>Teaching Experience: 20 years<br>Research Interests: Embedded system design, Internet of Things (IoT), Robotics and automation<br>Notable Achievements: Conceived and developed robotic carts for COVID patients’ treatment. Six carts delivered at public health centers in Ratnagiri district costing worth 1,50,000 rupees<br>Professional Affiliations: ISTE<br>Skills: Embedded C/C++ programming, Microcontroller development, IoT architecture and protocols<br>Personal Interests: DIY electronics projects and maker culture, Music, Volunteering for tech education initiatives</p>`,
+                        image: 'images/isaq_sir.png'
+                    },
+                    '5': {
+                        name: 'Dr. Kalpana Pawase',
+                        position: 'Assistant Professor, SEE',
+                        email: 'kalpana.pawase@mitaoe.ac.in',
+                        whatsapp: '+91 9158971240',
+                        organization: 'MIT Academy of Engineering',
+                        designation: 'Assistant Professor',
+                        domains: ['Image Processing', 'Machine Learning', 'Biomedical'],
+                        bio: `<p>Dr Kalpana Pawase<br>Research Area: Biomedical Engineering<br>Teaching Experience: 18 Years<br>Current Designation: Assistant Professor</p>`,
+                        image: 'images/kalpana_pawase.jpg'
+                    },
+                    '6': {
+                        name: 'Satish Ranade',
+                        position: 'Self Employed, BFSI/Advisor',
+                        email: 'satishr2000_in@yahoo.com',
+                        whatsapp: '+91 9960300897',
+                        organization: 'Self Employed',
+                        designation: 'Self Employed',
+                        domains: ['BFSI', 'Mentoring', 'Corporate Training'],
+                        bio: `<p>Advisor to National & International Start-ups, Chair Professor at Cummins College of Engineering for Women, Pune, Approved MENTOR on Incubation Centers, On START-UP INDIA initiative by Central Government, B.Incube, Chattisgadh Government backed incubator, AIC at Gujrat Technology University, Innovation Activity Center, Agri. Dev. Trust , Baramati, Dr. Babasaheb Ambedkar Technology University, Corporate Trainer for Disruptive Technologies, Conducts workshop on Idea & IP generation, Has Authored book on “Presentation Skills – An Art and a Science”, 40+ Years of Work Experience, Worked as General Manager at WIPRO Technologies for 13 years, Worked as Associate Vice President and Head of BFSI vertical at KPIT Infosystems for 10 years, Was partner in Software Services Firm servicing Indian Market for 11 years</p>`,
+                        image: 'images/satish_ranade.jpg'
+                    },
+                    '7': {
+                        name: 'Vivek Kamalakar Desai',
+                        position: 'Associate Professor, Founder WaveNXD',
+                        email: 'vivek.k.desai@gmail.com',
+                        whatsapp: '+91 9850844491',
+                        organization: "KIT's College of Engineering (Autonomous) Kolhapur",
+                        designation: 'Associate Professor, Founder WaveNXD Technologies Pvt. Ltd.',
+                        domains: ['Electronics', 'Automation', 'Embedded VLSI'],
+                        bio: `<p>Co-founder and promoter WaveNxd Technologies Pvt. Ltd. A highly experienced and enthusiastic Electronics Engineering Graduate, skilled in programming Embedded/ VLSI System, Automotive Electronics, Ultrasonic systems and implementation.</p>`,
+                        image: 'images/vivek_desai.jpg'
+                    },
+                    '8': {
+                        name: 'Vidhyadhar Dharmadhikari',
+                        position: 'Freelance Embedded Designer',
+                        email: 'vidhyadhar.dharmadhikari@gmail.com',
+                        whatsapp: '+91 9890654114',
+                        organization: 'Electronics Engineering, Walchand College of Engineering (Retd.)',
+                        designation: 'Freelance Embedded Designer',
+                        domains: ['Embedded System Design', 'Automotive', 'Agro-Tech'],
+                        bio: `<p>I'm Vidhyadhar Dharmadhikari, an Experienced Embedded System Designer and Educator. With a track record of designing numerous industry products and over three decades of experience as educator, I am a seasoned professional with a passion for both technology and education. My goal is to utilize my skills and experience to contribute to designing challenging electronic systems, particularly in the fields of automotive, agro-technology, and smart cities, but not limited to these domains. I'm open to any opportunity that challenges my capabilities and aligns with my vision. If you're looking for an experienced and passionate embedded system designer, I'd be delighted to explore potential collaborations and opportunities.</p>`,
+                        image: 'images/vidhyadhar_dharmadhikari.jpg'
+                    },
+                    '9': {
+                        name: 'Rucha Sarwadnya-Doifode',
+                        position: 'Chief Manager, STEM Education',
+                        email: 'ruchasarwadnya@gmail.com',
+                        whatsapp: '+91 7447766246',
+                        organization: 'STEM (Science-Technology-Engineering-Mathematics)',
+                        designation: 'Chief Manager',
+                        domains: ['EdTech', 'STEM', 'Curriculum'],
+                        bio: `<p>I am a passionate and dedicated STEM Trainer & Manager and Subject Matter Expert specializing in science education for K-12 students. With a Master's degree in Electronics and Telecommunication Engineering, I bring a strong foundation in STEM fields to my role. My expertise lies in developing and writing academic content, including curriculum and lesson plans tailored to the unique learning needs of students at the elementary and middle school levels.</p>`,
+                        image: 'images/rucha_sarwadnya.jpg'
+                    },
+                    '10': {
+                        name: 'Bajirao Doifode',
+                        position: 'Territory Manager, Bridgestone India',
+                        email: 'bajiraodoifode@gmail.com',
+                        whatsapp: '+91 7774001507',
+                        organization: 'Bridgestone India',
+                        designation: 'Territory Manager',
+                        domains: ['Sales', 'Marketing', 'Production'],
+                        bio: `<p>With over 11 years of experience in the tire and rubber industry, I am a Territory Sales Manager at Bridgestone India, the world's largest tire and rubber company. I hold certifications in project management and time management, and have developed a unique blend of skills in sales and business development, operations and production, and quality management.</p>`,
+                        image: 'images/bajirao_doifode.jpg'
+                    },
+                    '11': {
+                        name: 'Nigavekar Atul Ravichandra',
+                        position: 'Associate Professor, WaveNxD',
+                        email: 'nigavekar.atul@kitcoek.in',
+                        whatsapp: '+91 9922802999',
+                        organization: 'KIT’s College of Engineering, Kolhapur',
+                        designation: 'Associate Professor and cofounder WaveNxD Technologies Pvt',
+                        domains: ['Electronics', 'Ultrasonics', 'Product Engineering'],
+                        bio: `<p>Prof. Atul R. Nigavekar is co-founder and promoter of a startup company, WaveNxD Technologies Pvt. Ltd. The company manufactures import substitute Ultrasonic spray nozzles, offers Product engineering services. His startup is awarded cash prize of INR 2.0 Lakhs by Department of Science and Technology, Govt. of India, In startup Pitch-Deck competition organized by Scitech park, Pune.</p>`,
+                        image: 'images/atul_nigavekar.jpg'
+                    },
+                    '12': {
+                        name: 'Dr. Raghavendra Deolankar',
+                        position: 'Freelance Consultant - Manufacturing Excellence',
+                        email: 'raghavendra_deolankar@rediffmail.com',
+                        whatsapp: '+91 9822477292',
+                        organization: 'Freelance Consulting in Manufacturing Excellence',
+                        designation: 'Freelance Consultant',
+                        domains: ['Manufacturing', 'Quality', 'Lean'],
+                        bio: `<p>I have 27+ years of hands on experience of working in all major Manufacturing Operations verticals like Quality, Production, Maintenance, and a proven track record of value creation in the all the functions & organizations, I worked. While leading the operations of multi-plant/ location companies I also got exposure to SCM, Customer interactions for Quality & Delivery and also as Key Account management, Project Management, Process Engineering, Production Management systems, Organization building – handling the diverse teams across width and depth of organizations.</p>`,
+                        image: 'images/raghavendra_deolankar.jpg'
+                    },
+                    '13': {
+                        name: 'Prajakta Prakash Nalgirkar',
+                        position: 'Assistant Professor, Red Hat Academy',
+                        email: 'nalgirkar.prajakta@gmail.com',
+                        whatsapp: '+91 9403758652',
+                        organization: 'Red Hat Academy/ MIT',
+                        designation: 'Assistant Professor',
+                        domains: ['Linux', 'Ansible', 'RHCE'],
+                        bio: `<p>Experienced and certified RHCSA (Red Hat Certified System Administrator), RHCE(Red Hat Certified Engineer) professional with a passion for sharing knowledge and helping individuals excel in Linux system administration. I can apply my knowledge and skills and contribute to the organization’s growth and develop myself personally and professionally.</p>`,
+                        image: 'images/prajakta_nalgirkar.jpg'
                     }
                 };
+
 
                 const mentor = mentorData[mentorId];
 
